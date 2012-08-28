@@ -143,7 +143,7 @@ class BasicAuthentication(Authentication):
         """
         return request.META.get('REMOTE_USER', 'nouser')
 
-
+ 
 class ApiTokenAuthentication(Authentication):
     """
     Handles API Token auth, in which an user provide just a temporary
