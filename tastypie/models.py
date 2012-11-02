@@ -20,8 +20,13 @@ class ApiAccess(models.Model):
     accessed = models.PositiveIntegerField()
 
     def __unicode__(self):
+<<<<<<< HEAD
         return u"%s @ %s" % (self.identifer, self.accessed)
 
+=======
+        return u"%s @ %s" % (self.identifier, self.accessed)
+    
+>>>>>>> upstream/master
     def save(self, *args, **kwargs):
         self.accessed = int(time.time())
         return super(ApiAccess, self).save(*args, **kwargs)
